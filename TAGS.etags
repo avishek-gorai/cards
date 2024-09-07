@@ -1,0 +1,12 @@
+
+Cards.lisp,252
+(defun valid-card 19,341
+(defun rank 34,825
+(defun suit 38,937
+(defun count-suit 40,972
+(defun color-of 46,1145
+(defun first-red 49,1210
+(defun black-cards 56,1383
+(defun what-ranks 62,1543
+(defun beforep 68,1724
+(defun higher-rank-p 72,1820
