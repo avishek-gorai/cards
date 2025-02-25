@@ -16,28 +16,30 @@
 
 (in-package #:cards)
 
-(defvar my-hand "Cards in hand.")
-(defvar colors "Colors of cards.")
-(defvar all-ranks "Ranks of cards.")
+(defvar my-hand
+  (quote
+   ((3 hearts)
+    (5 clubs)
+    (2 diamonds)
+    (4 diamonds)
+    (ace spades)))
+  "Cards in hand.")
 
-(setf all-ranks (quote (2 3 4 5 6 7 8 9 10 jack queen king ace)))
+(defvar colors
+  (quote
+   ((clubs black)
+    (diamonds red)
+    (hearts red)
+    (spades black)))
+  "Colors of cards.")
 
-(setf colors (quote
-              ((clubs black)
-	       (diamonds red)
-	       (hearts red)
-	       (spades black))))
-
-(setf my-hand (quote
-               ((3 hearts)
-		(5 clubs)
-		(2 diamonds)
-		(4 diamonds)
-		(ace spades))))
+(defvar all-ranks
+  (quote (2 3 4 5 6 7 8 9 10 jack queen king ace))
+  "Ranks of cards.")
 
 (defun rank (card)
   "Returns rank of card."
-  (if (valid-card card) (first card)))
+  (first card))
 
 (defun suit (card)
   "Returns suit of card."
@@ -65,7 +67,7 @@
   "Returns a list of all black cards of the given hand."
   (remove-if-not
    (function (lambda (card)
-     (eq 'black (color-of card))))
+     (eq (quote black) (color-of card))))
    hand))
 
 (defun what-ranks (suit hand)
@@ -82,5 +84,5 @@
 
 (defun higher-rank-p (card1 card2)
   "Returns T if the first card has a higher rank than the second."
-  (if (and (valid-card card1) (valid-card card2))
+  (if (and card1 card2)
       (not (beforep (rank card1) (rank card2) all-ranks))))
