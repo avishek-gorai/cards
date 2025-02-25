@@ -15,10 +15,17 @@
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 (defpackage #:cards
-  (:use #:common-lisp-user)
+  (:use #:common-lisp)
   (:export my-hand
            colors
            all-ranks
            rank
-           suit)
+           suit
+           count-suit
+           color-of
+           first-red
+           black-cards
+           what-ranks
+           beforep
+           higher-rank-p)
   (:documentation "Manipulation of playing cars using applicative operators."))
