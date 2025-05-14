@@ -14,18 +14,6 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-(defpackage #:cards
-  (:use #:common-lisp)
-  (:export my-hand
-           colors
-           all-ranks
-           rank
-           suit
-           count-suit
-           color-of
-           first-red
-           black-cards
-           what-ranks
-           beforep
-           higher-rank-p)
+(defpackage cards
+  (:use common-lisp)
   (:documentation "Manipulation of playing cars using applicative operators."))
