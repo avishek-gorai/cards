@@ -14,7 +14,7 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-(asdf:defsystem #:cards
+(asdf:defsystem cards
   :description "Manipulation of playing cards using applicative operator."
   :author "Avishek Gorai <avishekgorai@myyahoo.com>"
   :license  "GNU General Public License version 3 or later"
